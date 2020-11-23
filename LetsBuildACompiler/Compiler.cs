@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace LetsBuildACompiler
+﻿namespace LetsBuildACompiler
 {
+    using System;
+
     public class Compiler
     {
         private const string Tab = "\t";
@@ -181,7 +181,6 @@ namespace LetsBuildACompiler
                         Divide();
                         break;
                     default:
-                        //Expected("Multop");
                         break;
                 }
             }
@@ -215,7 +214,6 @@ namespace LetsBuildACompiler
                         Subtract();
                         break;
                     default:
-                        //Expected("Addop");
                         break;
                 }
             }
