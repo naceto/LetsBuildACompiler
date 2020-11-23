@@ -13,7 +13,7 @@ namespace LetsBuildACompiler
         {
             Init();
             Assignment();
-            if (look != CR) 
+            if (look != CR)
             {
                 Expected("Newline");
             }
@@ -126,7 +126,7 @@ namespace LetsBuildACompiler
                 Expression();
                 Match(')');
             }
-            else if(IsAlpha(look))
+            else if (IsAlpha(look))
             {
                 Indent();
             }
@@ -172,7 +172,7 @@ namespace LetsBuildACompiler
             while (look == '*' || look == '/')
             {
                 EmitLn("MOVE D0,-(SP)");
-                switch(look)
+                switch (look)
                 {
                     case '*':
                         Multiply();
@@ -207,7 +207,7 @@ namespace LetsBuildACompiler
             {
                 EmitLn("MOVE D0,-(SP)");
                 switch (look)
-                {   
+                {
                     case '+':
                         Add();
                         break;
